@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
 import './App.css';
-
-import Person from './Person/Person';
-import Counter from './components/counters/Counter';  
-import CharInputChange from './components/CharInputChange/CharInputChange';
+import Radium from 'radium';
+import Person from '../components/Person/Person';
+import Counter from '../components/counters/Counter';  
+import CharInputChange from '../components/CharInputChange/CharInputChange';
 
 class App extends Component {
   state = {
@@ -66,12 +66,16 @@ class App extends Component {
 
   render(){
     const style = {
-      backgroundColor: 'white',
+      backgroundColor: 'green',
       fornt:'inherit',
       border:'2px solid blue',
       margin:'5px',
       padding:'13px',
-      cursor:'pointer'
+      cursor:'pointer',
+      ':hover':{
+        backgroundColor:'lightgreen',
+        color:'black',
+      }
     }
     let persons = null;
     if(this.state.showPerson){
@@ -87,28 +91,31 @@ class App extends Component {
               )
 
             })}
-          {/* <Person name={this.state.persons[0].name} 
-            age={this.state.persons[0].age} 
-            onchange={this.inputChangeHandler}
-           />
-          <Person name={this.state.persons[1].name} 
-            age={this.state.persons[1].age}
-           >Champ is always win!</Person>
-          <Person name={this.state.persons[2].name} 
-            age={this.state.persons[2].age}
-            /> 
-            */}
+          
           </div>
          )
+         style.backgroundColor='red';
+         style[':hover']={
+          backgroundColor:'salmon',
+          color:'black',
+         }
     }
+    const classes = [];
+    if(this.state.persons.length <=2 ){
+        classes.push('red'); //classes = ['red']
+    }
+    if(this.state.persons.length <=1){
+      classes.push('bold'); //classes = ['red', 'bold']
+    }
+    
 
     return (
       <div className="App">
       <h2>Hi I'm React App</h2>
-      <span>This is really working!</span><br/>
+      <span className={classes.join(' ')}>This is really working!</span><br/>
       <button 
         style={style}
-        onClick={this.togelPersonHandeler} >Togel Person</button>
+        onClick={this.togelPersonHandeler} >Toggel Person</button>
         {persons}
      {/* Insted to ternary opration used javescript logic */}
 
@@ -138,4 +145,4 @@ class App extends Component {
  
 }
 
-export default App;
+export default Radium(App);

@@ -24,6 +24,7 @@ class CharInputChange extends Component {
              clicked={()=>this.deleteCharHandler(index)}
              />
          })
+         
         return (
             <div>
                 <div>

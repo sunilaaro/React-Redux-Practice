@@ -1,11 +1,20 @@
 import React from 'react';
 
 const Validation = (props) =>{
-    let validationMessage = 'Text long enough';
-
-    if(props.InputLenght <= 5){
-      validationMessage = 'Text lenght too sort';
+    
+    let validationMessage = '';
+    let style = {
+        color:'#fff',
     }
+    if(props.InputLenght > 5){
+      validationMessage = 'Text long enough';
+      style.color = 'green';
+    }
+    if(props.InputLenght > 0 && props.InputLenght <=5){
+      validationMessage = 'Text lenght too sort';
+      style.color = 'red';
+    }
+    
   return(
       <div>
           {//Solution One Type
@@ -14,7 +23,7 @@ const Validation = (props) =>{
           :<p>Text lenght enough</p>
           } */} 
 
-         <p>{//Second type Solution
+         <p style={style}>{//Second type Solution
            validationMessage }
         </p>
 
