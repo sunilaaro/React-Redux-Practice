@@ -4,6 +4,10 @@ import Radium from 'radium';
 import Person from '../components/Person/Person';
 import Counter from '../components/counters/Counter';  
 import CharInputChange from '../components/CharInputChange/CharInputChange';
+import Header from '../components/Header/Header';
+import Card from '../components/ContactList/Card';
+
+
 
 class App extends Component {
   state = {
@@ -63,7 +67,7 @@ class App extends Component {
       showPerson: !doesShow
     })
   }
-
+  
   render(){
     const style = {
       backgroundColor: 'green',
@@ -108,10 +112,14 @@ class App extends Component {
       classes.push('bold'); //classes = ['red', 'bold']
     }
     
-
+    /* Start Dynamic Greeting */
+    //const date = new Date(2019,1,1,19);
+    
+/* End Dynamic Greeting */
     return (
       <div className="App">
-      <h2>Hi I'm React App</h2>
+      <Header />
+      <h2>This is Super React App</h2>
       <span className={classes.join(' ')}>This is really working!</span><br/>
       <button 
         style={style}
@@ -137,6 +145,7 @@ class App extends Component {
         <Counter />
         <hr />
         <CharInputChange />
+        <Card />
       </div>
     );
 

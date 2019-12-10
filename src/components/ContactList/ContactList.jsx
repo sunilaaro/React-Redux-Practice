@@ -1,0 +1,31 @@
+const ContactList = [
+    {
+        id:'1',
+        name:'Angela',
+        imgUrl:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-xGggkXlDSvYPe0HeZW79posTaUsGzlV1_lE47zDyk946gGpC1Q&s',
+        phone:'892120111',
+        email:'angela@gmail.com'
+    },
+    {
+        id:'2',
+        name:'Rupali',
+        imgUrl:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-xGggkXlDSvYPe0HeZW79posTaUsGzlV1_lE47zDyk946gGpC1Q&s',
+        phone:'893889292',
+        email:'rupali@gmail.com'
+    },
+    {
+        id:'3',
+        name:'Rocky',
+        imgUrl:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-xGggkXlDSvYPe0HeZW79posTaUsGzlV1_lE47zDyk946gGpC1Q&s',
+        phone:'892892022',
+        email:'racky@gmail.com'
+    },
+    {
+        id:'4',
+        name:'Jack',
+        imgUrl:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-xGggkXlDSvYPe0HeZW79posTaUsGzlV1_lE47zDyk946gGpC1Q&s',
+        phone:'233898911',
+        email:'jack@gmail.com'
+    }
+];
+export default ContactList;
