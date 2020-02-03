@@ -4,7 +4,7 @@ import Avatar from './images/Avatar';
 
 class Contact extends Component{
    constructor(props){
-       super();
+       super(props);
        this.state ={
          showCantact:true,
        }
@@ -27,6 +27,7 @@ class Contact extends Component{
             boxShadow:'0 2px 5px #ccc',
             textAlign:'left',
             marginBottom:'50px',
+            ':hover':'#ccc',
            
         }
         const nameStyle = {
@@ -64,7 +65,7 @@ class Contact extends Component{
             return(
                 <div>
                 <div style={cardStyle}>
-                    <h4>Do you want to see contact cleck below</h4>
+                    <h4>Do you want to see {this.props.name} details click below</h4>
                  <button style={butttonHide} className="hide" onClick={this.showCantactHandel}>+</button>
                 </div>
                 {crt}
@@ -72,6 +73,7 @@ class Contact extends Component{
             )
     }
 }
-
+var str="Javatpoint";    
+document.writeln(str.charAt(4));   
 
 export default Contact;

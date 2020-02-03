@@ -6,6 +6,7 @@ import Counter from '../components/counters/Counter';
 import CharInputChange from '../components/CharInputChange/CharInputChange';
 import Header from '../components/Header/Header';
 import Card from '../components/ContactList/Card';
+import Curd from './curd/Curd';
 
 
 
@@ -146,6 +147,7 @@ class App extends Component {
         <hr />
         <CharInputChange />
         <Card />
+        <Curd />
       </div>
     );
 
